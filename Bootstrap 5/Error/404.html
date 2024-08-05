@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="website icon" type="image/x-icon" href="../imgs/web-icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../addons/bootstraps/bootstrap.min.css">
+  <title>HOS || Error</title>
+</head>
+
+<body class="bg-dark">
+  <img src="../imgs/404.png" class="error">
+  <h3 class="text-center text-light pt-3 fw-bold">
+    Oops! It looks like you've discovered uncharted territory.
+  </h3>
+  <p class="text-primary p-2 text-center">The page you're looking for must have taken a secret path or vanished into thin air. Fear not, brave explorer! There are several ways to get back on track</p>
+  <ul class="text-light p-3">
+    <li><span class="fw-bold">Navigate back to our homepage</span> where familiar lands and plenty of resources await</li>
+    <a href="../index.html" class="pb-4">Go to homepage</a>
+    <li><span class="fw-bold">Follow the map</span> (links) below to discover other areas of our site that might interest or intrigue you</li>
+  </ul>
+  <h1 class="text-center text-white fw-bold">Happy Exploring</h1>
+  <p class="text-primary p-3 text-center">And if you feel like you've reached this message in error, or if you want to report a missing page, please don't hesitate to [contact us](#). Your guidance helps us chart the unknown!</p>
+  <a href="../community/contact.html" class="px-3 text-white fw-bold">Contact Us</a>
+  <h2 class="text-warning text-center pt-4 fw-bold">Blog</h2>
+  <div class="blogs mb-5">
+    <div class="blog-one blog">
+      <img src="../imgs/lite.svg" class="lite">
+      <div class="text">
+        <h2 class="fw-bold">CSS</h2>
+        <p>Scrollbars</p>
+      </div>
+    </div>
+    <div class="blog-two blog">
+      <img src="../imgs/lite.svg" class="lite">
+      <div class="text">
+        <h2 class="fw-bold">JavaScript</h2>
+        <p>Window Preloader</p>
+      </div>
+    </div>
+    <div class="blog-three blog">
+      <img src="../imgs/lite.svg" class="lite">
+      <div class="text">
+        <h2 class="fw-bold">JavaScript</h2>
+        <p>Strings Manipulation</p>
+      </div>
+    </div>
+    <div class="blog-four blog">
+      <img src="../imgs/lite.svg" class="lite">
+      <div class="text">
+        <h2 class="fw-bold">HTML</h2>
+        <p>Inputs</p>
+      </div>
+    </div>
+  </div>
+  <script src="../addons/bootstraps/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => { // Ensure the DOM is fully loaded
+      let index = 0; // Track the current item
+      const items = document.querySelectorAll('.blog'); // Get all items
+      const total = items.length; // Total number of items
+
+      function cycleItems() {
+        const item = items[index]; // Get the current item
+        items.forEach(item => { item.style.display = "none"; }); // Hide all items
+        item.style.display = "block"; // Show the current item
+        item.style.scale = 1;
+
+        index = (index + 1) % total; // Update index to the next item, loop back to 0 at the end
+      }
+
+
+      setInterval(cycleItems, 3000); // Change item every 2000 milliseconds (3 seconds)
+    });
+  </script>
+  <div class="loader-wrapper">
+    <div class="loader">
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+<script src="../main.js"></script>
+</body>
+
+</html>
